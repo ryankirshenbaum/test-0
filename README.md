@@ -16,7 +16,6 @@ Optional
 --------
 
 * Lock all dependencies
-* Implement `django-rest-framework` or `GraphQL` - tie in both frontend and backend using this
-* Implement `elasticsearch` - index `Member` objects
+* Implement `django-rest-framework` - tie in both frontend and backend using this
 * Implement `celery` - `Member` creation to be run by worker
 * Implement `docker` / `docker-compose` to simultaneously launch frontend and backend (along with DB, if applicable)

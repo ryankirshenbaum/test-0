@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Testing Vue</title>
+  </head>
+  <body>
+  <div id="vue-app">
+      <h1>[[ myTitle ]]</h1>
+      <input v-model="username" placeholder="Username">
+      <input v-model="password" placeholder="Password">
+      <input v-model="gender" placeholder="Gender">
+      <input v-model="country" placeholder="Country">
+      <p>Username is: {{ username }}</p>
+      <p>Password is: {{ password }}</p>
+      <p>Gender is: {{ gender }}</p>
+      <p>Country is: {{ country }}</p>
+  </div>
+
+  <div>
+        {% if member_list %}
+            <ul>
+            {% for member in member_list %}
+                <li>
+                    username: {{ member.user }}
+                    gender: {{ member.gender }}
+                    country: {{ member.country }}
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No members are available.</p>
+      {% endif %}
+
+
+  </div>
+
+  <script type="text/javascript">
+      let app = new Vue({
+        el: "#vue-app",
+        delimiters: ['[[', ']]'],
+        data: {
+            myTitle: 'Hello Vue!',
+        },
+      });
+  </script>
+  </body>
+</html>
